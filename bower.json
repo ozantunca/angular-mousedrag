@@ -1,0 +1,8 @@
+{
+  "name": "ngmousedrag",
+  "version": "0.1.0",
+  "main": "./ngmousedrag.js",
+  "dependencies": {
+    "angular": ">=1"
+  }
+}
