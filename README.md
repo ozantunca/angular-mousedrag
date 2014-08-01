@@ -9,6 +9,7 @@ Simple AngularJS directive for handling mouse dragging events. If you are not in
 ## Installation
 ```sh
 bower install --save ng-mousedrag
+```
 
 ## Usage
 
