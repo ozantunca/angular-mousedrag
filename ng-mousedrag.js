@@ -5,7 +5,7 @@
  */
 (function() {
 
-  var ngMousedrag = angular.module('ngMousedrag', []);
+  var ngMousedrag = angular.module('ngMouseDrag', []);
   ngMousedrag.directive('ngMousedrag', ['$document', function ngMousedrag($document) {
     return {
       restrict: 'A',
