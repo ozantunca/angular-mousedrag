@@ -29,7 +29,7 @@
             scope.$eval(attrs.ngMousedrag);
           });
 
-          $document.bind(endTypes, function (e) {
+          $document.bind(endTypes, function () {
             $document.unbind(moveTypes);
           });
         });

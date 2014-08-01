@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Mousedrag Example</title>
+  <style type="text/css">
+    #draggable {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background: red;
+      cursor: move;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrapper" ng-controller="MyCtrl">
+    <h3>Dragged on X axis: {{ dragX }}</h3>
+    <h3>Dragged on Y axis: {{ dragY }}</h3>
+    <div id="draggable" ng-mousedrag="onMouseDrag($event);"></div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script type="text/javascript" src="ng-mousedrag.js"></script>
+  <script type="text/javascript">
+
+    (function() {
+      angular.module('myApp', ['ngMousedrag'])
+      .controller('MyCtrl', [ '$scope', '$compile', function MyCtrl($scope, $compile) {
+
+        $scope.dragX = 0;
+        $scope.dragY = 0;
+
+        // document.getElementById('wrapper').appendChild( $compile('<svg height="210" width="500"><line x1="{{ startX }}" y1="{{ startY }}" x2="{{ dragX }}" y2="{{ dragY }}" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>')($scope) );
+
+        $scope.onMouseDrag = function ($event) {
+          var draggableObject = document.getElementById('draggable');
+          draggableObject.style.top = $event.pageY - (draggableObject.offsetHeight / 2) +'px';
+          draggableObject.style.left = $event.pageX - (draggableObject.offsetWidth / 2) +'px';
+          $scope.dragX = $event.dragX;
+          $scope.dragY = $event.dragY;
+          $scope.$digest();
+        }
+      }]);
+
+      angular.bootstrap(document, ['myApp']);
+    })();
+  </script>
+</body>
+</html>
