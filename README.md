@@ -6,6 +6,10 @@ Simple AngularJS directive for handling mouse dragging events. If you are not in
 ## Requirements
 [AngularJS] - tested on 1.2.19
 
+## Installation
+```sh
+bower install --save ng-mousedrag
+
 ## Usage
 
 HTML:
