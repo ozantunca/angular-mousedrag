@@ -33,8 +33,6 @@
         $scope.dragX = 0;
         $scope.dragY = 0;
 
-        // document.getElementById('wrapper').appendChild( $compile('<svg height="210" width="500"><line x1="{{ startX }}" y1="{{ startY }}" x2="{{ dragX }}" y2="{{ dragY }}" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>')($scope) );
-
         $scope.onMouseDrag = function ($event) {
           var draggableObject = document.getElementById('draggable');
           draggableObject.style.top = $event.pageY - (draggableObject.offsetHeight / 2) +'px';
