@@ -1,8 +1,25 @@
 {
-  "name": "ngmousedrag",
+  "name": "ngMouseDrag",
   "version": "0.1.0",
-  "main": "./ngmousedrag.js",
+  "main": "ng-mousedrag.js",
   "dependencies": {
     "angular": ">=1"
-  }
+  },
+  "homepage": "https://github.com/ozantunca/angular-mousedrag",
+  "authors": [
+    "Ozan Tunca <ozantunca90@gmail.com>"
+  ],
+  "description": "Directive for handling mousedrag events",
+  "keywords": [
+    "mousedrag",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
