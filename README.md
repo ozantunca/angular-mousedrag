@@ -19,13 +19,15 @@ HTML:
 
 JS:
 ```js
-angular.module('myApp', ['ngMousedrag']);
+angular.module('myApp', ['ngMouseDrag']);
 var MyCtrl = [ '$scope', function($scope) {
+
   $scope.onMouseDrag = function ($event) {
     var draggableObject = document.getElementById('draggable');
     draggableObject.style.top = $event.pageY + 'px';
     draggableObject.style.left = $event.pageX + 'px';
   }
+  
 }];
 ```
 
